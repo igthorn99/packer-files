@@ -31,8 +31,8 @@ build {
     execute_command = "chmod +x {{ .Path }}; {{ .Vars }} sudo -E sh '{{ .Path }}'"
     inline          = [
 		"yum update -y", 
-    "yum install -y openscap openscap-scanner openscap-utils scap-security-guide",
-    "oscap xccdf eval --profile xccdf_org.ssgproject.content_profile_cis_server_l1 --remediate --fetch-remote-resources /usr/share/xml/scap/ssg/content/ssg-almalinux9-ds.xml",
+    		"yum install -y openscap openscap-scanner openscap-utils scap-security-guide",
+    		"oscap xccdf eval --profile xccdf_org.ssgproject.content_profile_cis_server_l1 --remediate --fetch-remote-resources /usr/share/xml/scap/ssg/content/ssg-almalinux9-ds.xml",
 		"/usr/sbin/waagent -force -deprovision+user && export HISTSIZE=0 && sync"
 	]
     inline_shebang  = "/bin/sh -x"
