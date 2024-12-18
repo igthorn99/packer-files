@@ -31,3 +31,8 @@ In order to validate the compliance you will need to build out the Alma Linux se
 ```
 sudo oscap xccdf eval --profile xccdf_org.ssgproject.content_profile_stig --report ~/stig-results.html --fetch-remote-resources /usr/share/xml/scap/ssg/content/ssg-almalinux9-ds.xml
 ```
+
+# Packer Build Reference
+This is the site to start using Packer to build images in Azure.
+
+[Microsoft Learn Create Linux VM Images](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/build-image-with-packer)
